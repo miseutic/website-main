@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="#">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+        }
+
+        /* The hero image */
+        .hero-image {
+            /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+            /* Set a specific height */
+            height: 50%;
+            /* Position and center the image to scale nicely on all screens */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Place text in the middle of the image */
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div w3-include-html="top_navigation.html"></div>
+    <div w3-include-html="login_nav.html"></div>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>About Us</h1>
+            <br>
+            <p>A food review website for today's world<br> with the aim of helping people make decisions, <br>Om Nom Nom has something for everyone.</p>
+            <br>
+            <p><small>Any queries? Contact us @ 2102095C@student.tp.edu.sg</small></p>
+        </div>
+    </div>
+    <div w3-include-html="login_modal.html"></div>
+    <div w3-include-html="register_modal.html"></div>
+    <div w3-include-html="success_modal.html"></div>
+    <div w3-include-html="fail_modal.html"></div>
+    <div w3-include-html="profile_modal.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        //to bring in other HTML on the fly into this page
+        w3.includeHTML();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/86ec7c1143.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/checktoken.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/user.js"></script>
+</body>
+</html>
