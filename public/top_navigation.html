@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .img-container {
+            text-align: center;
+        }
+
+        a {
+            color: #fefefe;
+            text-decoration: none;
+        }
+        
+        .p-menu {
+            height: 100%;
+            }
+
+        /* Hamburger */
+        .hamburger{
+            height: 45px;
+            margin: 10px;
+            display: -ms-grid;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            justify-items: right;
+            z-index: 120;
+            }
+
+            .hamburger div {
+                background-color: #051747;
+                position: relative;
+                width: 40px;
+                height: 5px;
+                margin-top: 7px;
+                -webkit-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+            }
+
+        #toggle {
+            display: none;
+            }
+
+        #toggle:checked + .hamburger .top {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            margin-top: 22.5px;
+            }
+
+        #toggle:checked + .hamburger .meat {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            margin-top: -5px;
+            }
+
+        #toggle:checked + .hamburger .bottom {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            }
+        
+        #toggle:checked ~ .menu {
+            height: 340px;
+            }
+
+        /* Menu */
+        .menu {
+            width: 100%;
+            background-color: #051747;
+            margin: 0;
+            display: -ms-grid;
+            display: grid;
+            grid-template-rows: 1fr repeat(4, 0.5fr);
+            grid-row-gap: 25px;
+            padding: 0;
+            list-style: none;
+            clear: both;
+            width: auto;
+            text-align: center;
+            height: 0px;
+            overflow: hidden;
+            transition: height .4s ease;
+            z-index: 120;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .menu a:first-child {
+            margin-top: 40px;
+            }
+
+        .menu a:last-child {
+            margin-bottom: 40px;
+            }
+
+        .link {
+            width: 100%;
+            margin: 0;
+            padding: 10px 0;
+            font: 700 20px 'Oswald', sans-serif;
+            }
+
+            .link:hover {
+                color: #051747;
+                background-color: #e7e9f0;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+    </style>
+</head>
+<body>
+    <div class="img-container" href="index.html">
+        <img src="images/om_nom_nom.png" alt="Website Logo" width="500" text-align="center;">
+    </div>
+    <section class="p-menu">
+        <nav id="navbar" class="navigation" role="navigation">
+            <input id="toggle" type="checkbox" />
+            <label class="hamburger" for="toggle">
+                <div class="top"></div>
+                <div class="meat"></div>
+                <div class="bottom"></div>
+            </label>
+            <nav class="menu">
+                <a class="link" a href="index.html">Home</a>
+                <a class="link" a href="page_restaurant.html" onClick="listLunch">Our Restaurants</a>
+                <a class="link" a href="page_about.html">About Us</a>
+            </nav>
+        </nav>
+    </section>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<div class="modal fade " id="profileModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-body px-5">
+                <form>
+                    <div class="form-group">
+                        <label for="password">Old Password</label>
+                        <input type="password" class="form-control" id="password2" placeholder="Old Password">
+                        <label for="password2">New Password (If you want to change it)</label>
+                        <input type="password" class="form-control" id="password3" placeholder="New Password">
+                        <label for="first_name">First Name</label>
+                        <input class="form-control" id="first_name2">
+                        <label for="last_name">Last Name</label>
+                        <input class="form-control" id="last_name2">
+                        <label for="mobile_number">Phone Number</label>
+                        <input class="form-control" id="mobile_number2" placeholder="91234567">
+                        <label for="email_address">Email</label>
+                        <input class="form-control" id="email_address" placeholder="example@email.com">
+                        <label for="gender">Gender</label>
+                        <input class="form-control" id="gender" placeholder="eg: Male/Female/Etc.">
+                        <label for="address">Address</label>
+                        <input class="form-control" id="address" placeholder="23 Clementi Ave 451">
+                    </div>
+                    <button onclick="updateUser()" type="button" class="btn btn-primary" data-dismiss="modal">Update Profile</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/user.js"></script>
